@@ -1,0 +1,50 @@
+# -NET
+Imports System.Console
+Module Module1
+    Sub Main()
+unos:   WriteLine("Odaberite stanje od 1 do 5: ")
+        WriteLine("(1) Normalno stanje")
+        WriteLine("(2) Protuprovalni alarm")
+        WriteLine("(3) Protupožarni alarm")
+        WriteLine("(4) Greška")
+        WriteLine("(5) Izlaz.")
+        WriteLine()
+        Dim broj As Integer
+        Write("Unesen je broj: ")
+        broj = ReadLine()
+        WriteLine()
+        If broj = 1 Then
+            WriteLine("Zapisujem normalno stanje...")
+            WriteLine("Zasad je sve u redu.")
+            WriteLine()
+            GoTo unos
+        ElseIf broj = 2 Then
+            WriteLine("Upozorenje! Provala u tijeku...")
+            WriteLine("Poziva se policija...")
+            WriteLine("Zapisuje se poziv.")
+            WriteLine()
+            GoTo unos
+        ElseIf broj = 3 Then
+            WriteLine("Upozorenje! Požar u tijeku...")
+            WriteLine("Pozivaju se vatrogasci...")
+            WriteLine("Zapisuje se poziv.")
+            WriteLine()
+            GoTo unos
+        ElseIf broj = 4 Then
+            WriteLine("Greška u sutavu.")
+            WriteLine("Zapisuje se greška.")
+            WriteLine()
+            GoTo unos
+        ElseIf broj = 5 Then
+            WriteLine("Izlaz...")
+            WriteLine()
+
+        Else
+            'ElseIf broj < 1 And broj > 5 Then
+            WriteLine("Unijeli ste pogrešan broj. Molimo pokušajte ponovno.: ")
+            WriteLine()
+            GoTo unos
+        End If
+    End Sub
+End Module
+
